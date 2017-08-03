@@ -1,5 +1,6 @@
 package com.practice;
 
+import com.two.practice.Poem;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +13,14 @@ import static org.junit.Assert.assertNotNull;
 @ContextConfiguration(classes = Config.class)
 public class test {
 
-    @Autowired Novel novel;
+    @Autowired
+    private Novel novel;
+    @Autowired
+    private Poem poem;
 
     @Test
-    public void ShouldLoadNovelBean() throws Exception {
+    public void ShouldLoadBean() throws Exception {
         assertNotNull(novel);
+        assertNotNull(poem);
     }
 }
